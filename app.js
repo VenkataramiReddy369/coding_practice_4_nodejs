@@ -97,7 +97,8 @@ app.delete("/players/:playerId/", async (request, response) => {
   const { playerId } = request.params;
   const deletePlayerQuery = `
     delete 
-    from cricket_team;`;
+    from cricket_team
+    where player_id = ${playerId;`;
   await db.run(deletePlayerQuery);
   response.send("Player Removed");
 });
