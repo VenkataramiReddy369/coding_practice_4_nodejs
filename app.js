@@ -60,7 +60,7 @@ app.post("/players/", async (request, response) => {
         '${role}'
         );`;
   const dbResponse = await db.run(createPlayerQuery);
-  response.send("player Added to Team");
+  response.send("Player Added to Team");
 });
 
 // API 3
