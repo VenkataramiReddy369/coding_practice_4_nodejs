@@ -89,7 +89,7 @@ app.put("/players/:playerId/", async (request, response) => {
     role = '${role}'
     ;`;
   await db.run(updatePlayerQuery);
-  response.send("player Details Updated");
+  response.send("Player Details Updated");
 });
 
 // API 5
